@@ -25,5 +25,16 @@ buttons.forEach(btn => {
 
 const skills = document.querySelectorAll("#skills_tab li");
 skills.forEach((skill, i) => {
-    skill.style.animationDelay = `${i * 2}s`;
-})
+    skill.style.animationDelay = `${i * 1}s`;
+
+    let skillName = skill.innerHTML;
+    const icon = document.createElement("img");
+    if (skillName == "C#") skillName = "csharp";
+    icon.src = `./assets/img/${skillName}.svg`;
+    icon.style.height = "1.7rem";
+    icon.style.width = "50px";
+    icon.style.position = "absolute";
+    icon.style.left = "27px";
+    icon.style.marginTop = "3px";
+    skill.appendChild(icon);
+});
