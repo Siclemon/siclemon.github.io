@@ -1,0 +1,115 @@
+:root {
+    --bg-color: ;
+    --header-color: #dbd3ee;
+    --text-color: ;
+
+    --main-font: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+}
+
+html, body {
+    overflow: hidden;
+    font-family:var(--main-font);
+    background-color: #fefaf7;
+}
+
+body>header {
+    background-color: var(--header-color);
+    margin-bottom: 8px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 8px 0;
+
+        img {
+            width: 25vw;
+            border-radius: 100%;
+        }
+    }
+
+    aside {
+        overflow-x: scroll;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width:100%;
+        white-space: nowrap;
+        gap: 5dvw;
+        padding: 4px;
+        border: solid 1px black;
+
+        div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 4px;
+        }
+
+        svg {
+            height: 1.5rem;
+        }
+    }
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 10px;
+
+    .section {
+        width: 92vw;
+        border: solid 1px rgb(128, 128, 128, 0.5);
+        box-shadow: 1px 2px 5px rgb(128, 128, 128, 0.4);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 5px;
+        padding: 5px;
+        box-sizing: border-box;
+        
+        .section-header {
+            /* background-color: rgb(0, 247, 255); */
+            padding: 3px 2px;
+            border-bottom: dotted grey 1px;
+            
+            h2 {
+            }
+        }
+    }
+
+    #formations>section {
+        /* border: 1px solid black; */
+        padding: 3px;
+
+        header {
+            display: flex;
+            justify-content: space-between;
+
+            h3 {
+                font-size: 1rem;
+            }
+            span {
+                font-size: 0.8rem;
+                color: grey;
+                text-align: end;
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .place {
+            font-style: italic;
+        }
+    }
+}
