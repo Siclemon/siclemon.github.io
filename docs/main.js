@@ -11,6 +11,11 @@ buttons.forEach(btn => {
         if (currentTab)
             currentTab.style.display = "flex";
 
+        window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
         //add style to pressed button
         const lis = document.querySelectorAll("li.nav__button");
         lis.forEach(li => {
@@ -18,8 +23,8 @@ buttons.forEach(btn => {
         });
         btn.closest("li").classList.add("active");
 
-        const abtme = document.querySelector("#about_me")
-        abtme.style.display = "none";
+        // const abtme = document.querySelector("#about_me")
+        // abtme.style.display = "none";
     })
 });
 

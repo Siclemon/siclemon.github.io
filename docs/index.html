@@ -52,16 +52,33 @@
             </div>
         </article>
 
-        <div id="about_me">
-            <div class="box_decoration__shadow">
-                <div class="box_decoration">
-                    <div class="lines box_decoration__lines"></div>
+
+        <article class="tab" id="me_tab">
+
+                <div class="box_decoration__shadow">
+                    <div class="box_decoration">
+                        <div class="lines box_decoration__lines"></div>
+                    </div>
                 </div>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam corporis ipsa itaque error. Id repellendus
-                voluptate labore, facere laudantium sapiente sunt repellat consequatur. Ut reprehenderit vel aut facilis
-                fugit pariatur!</p>
-        </div>
+
+                <header class="tab__header">
+                    <h2>A propos de moi</h2>
+                </header>
+                
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam corporis ipsa itaque error. Id
+                    repellendus
+                    voluptate labore, facere laudantium sapiente sunt repellat consequatur. Ut reprehenderit vel aut
+                    facilis
+                    fugit pariatur!</p>
+
+                    
+            <section class="projects">
+                <header class="section__header">
+                    <h2>Projets persos</h2>
+                </header>
+            </section>
+
+        </article>
 
         <article class="tab" id="education_tab">
             <div class="box_decoration__shadow">
@@ -112,7 +129,7 @@
             </article>
             <article class="tab__item">
                 <header class="tab__item__header">
-                    <h3>Diplôme nattional du Brevet</h3>
+                    <h3>Diplôme national du Brevet</h3>
                     <div>
                         <time datetime="">2016</time>
                         <span>Collège Saint-Jean - Colmar</span>
@@ -181,15 +198,27 @@
                 <li>HTML</li>
                 <li>CSS</li>
             </ul>
-            <h3></h3>
+            <h3>Outils</h3>
             <ul>
-                <li></li>
+                <li>VS Code</li>
+                <li>Figma</li>
+                <li>GitHub</li>
+                <li>GitLab</li>
+            </ul>
+            <h3>Langues</h3>
+            <ul>
+                <li>Anglais - B2/C1</li>
+                <li>Espagnol - A2</li>
+                <li>Japonais - N4</li>
             </ul>
         </article>
 
     </main>
     <nav>
         <ul>
+            <li class="nav__button">
+                <div><button type="button" class="nav__button" id="me">Moi</button></div>
+            </li>
             <li class="active nav__button">
                 <div><button type="button" class="nav__button" id="experience">Expériences</button></div>
             </li>
@@ -198,9 +227,6 @@
             </li>
             <li class="nav__button">
                 <div><button type="button" class="nav__button" id="skills">Compétences</button></div>
-            </li>
-            <li class="nav__button">
-                <div><button type="button" class="nav__button" id="me">Moi</button></div>
             </li>
         </ul>
     </nav>

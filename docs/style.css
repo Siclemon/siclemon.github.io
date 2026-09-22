@@ -23,7 +23,7 @@
 }
 
 * {
-    letter-spacing: calc(progress(1em, 18px, 48px) * -0.03em);
+    letter-spacing: calc(progress(1em, 18px, 48px) * -0.025em);
 }
 
 body {
@@ -44,7 +44,7 @@ body {
 
 html {
     overflow-x: hidden;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     line-height: 1em;
 }
 
@@ -187,9 +187,9 @@ html {
     .me__box {
         background: var(--light-box-bg);
         height: 170px;
-        width: 50%;
+        width: 53%;
         position: absolute;
-        left: 47%;
+        left: 44%;
         top: 0px;
         box-sizing: border-box;
         border: solid 2px var(--header-bg);
@@ -267,17 +267,7 @@ html {
 
 }
 
-#about_me {
-    margin-top: 32px;
-    background: var(--dark-box-bg);
-    overflow: visible;
-    position: relative;
-
-    .box_decoration__shadow {
-        width: 22vw;
-        top: -14px;
-        background: var(--bg-grid-color);
-    }
+#me_tab {
 
     p {
         border-top: solid 2px var(--header-bg);
@@ -286,9 +276,40 @@ html {
         color: var(--light-text-color);
         text-shadow: var(--light-text-shadow);
         font-size: 1rem;
-        padding: 6px 8px 8px 20px;
+        padding: 26px 8px 8px 20px;
+        margin: 0;
+        padding-top: 30px;
+        margin-top: -22px;
+        background: var(--dark-box-bg);
     }
+
+
+    .section__header {
+        background: var(--header-bg);
+        color: var(--light-text-color);
+        height: 3rem;
+        clip-path: polygon(0 0, 100% 0, 100% 77%, calc(100% - 120px) 77%, calc(100% - 170px) 100%, 0 100%);
+        clip-path: polygon(0 23%, 120px 23%, );
+
+        h2 {
+            margin: 4px 8px;
+            text-shadow: var(--light-text-shadow-big);
+            line-height: 2em;
+        }
+    }
+
+    .section__header::before {
+        content: "";
+        position: absolute;
+        height: 3rem;
+        width: 100%;
+        clip-path: polygon(0 calc(100% - 4px), calc(100% - 170px) calc(100% - 4px), calc(100% - 120px) calc(77% - 4px), 100% calc(77% - 4px), 100% calc(77% - 2px), calc(100% - 120px) calc(77% - 2px), calc(100% - 170px) calc(100% - 2px), 0 calc(100% - 2px));
+        /* clip-path: polygon(0 23%, 100% 0, 100% 100%, 0 100%); */
+        background: var(--light-accent);
+    }
+
 }
+
 
 .tab {
     display: flex;
@@ -316,6 +337,7 @@ html {
         h2 {
             margin: 4px 8px;
             text-shadow: var(--light-text-shadow-big);
+            line-height: 1em;
         }
     }
 
@@ -363,7 +385,7 @@ html {
                 clip-path: polygon(0 50%, 5px 0, calc(100% - 5px) 0, 100% 50%, calc(100% - 5px) 100%, 5px 100%);
                 width: 93%;
 
-                font-size: 1.3rem;
+                font-size: 1.2rem;
                 line-height: 100%;
                 font-weight: normal;
 
@@ -461,8 +483,8 @@ html {
             background: var(--light-accent);
             margin-left: -70px;
             position: absolute;
-            clip-path: polygon(9px 0, 11px 0, 2px 50%, 11px 100%, 9px 100%, 0 50%, 9px 0,
-                    49px 0, 51px 0, 60px 50%, 51px 100%, 49px 100%, 58px 50%, 49px 0);
+            clip-path: polygon(9px 0, 12px 0, 3px 50%, 12px 100%, 9px 100%, 0 50%, 9px 0,
+                    48px 0, 51px 0, 60px 50%, 51px 100%, 48px 100%, 57px 50%, 48px 0);
         }
 
         li::after {
@@ -470,7 +492,6 @@ html {
             display: block;
             width: 50px;
             height: 1.7rem;
-            /* background: orange; */
             position: absolute;
             left: 27px;
             margin-top: -1.9rem;
@@ -484,14 +505,19 @@ html {
 @keyframes list_light {
     90% {
         background-color: var(--header-bg);
+        color: var(--light-text-color);
+        text-shadow: var(--light-text-shadow);
     }
 
     91.5% {
         background-color: #315a10;
+        color: #d6ff7b;
+        text-shadow: 1px 1px 0 var(--light-accent), 0px 1px 0 var(--light-accent), 1px 0px 0 var(--light-accent);
     }
 
     100% {
         background-color: #315a10;
+        color: #d6ff7b;
     }
 }
 
