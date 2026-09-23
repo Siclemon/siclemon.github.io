@@ -269,10 +269,10 @@ html {
 
 #me_tab {
 
-    p {
-        border-top: solid 2px var(--header-bg);
+    #me__about {
+        /* border-top: solid 2px var(--header-bg); */
         border-bottom: solid 2px var(--header-bg);
-        box-shadow: 0 0 0 2px var(--bg-grid-color);
+        /* box-shadow: 0 0 0 2px var(--bg-grid-color); */
         color: var(--light-text-color);
         text-shadow: var(--light-text-shadow);
         font-size: 1rem;
@@ -287,13 +287,14 @@ html {
     .section__header {
         background: var(--header-bg);
         color: var(--light-text-color);
-        height: 2rem;
-        clip-path: polygon(0 35%, 10px 35%, 60px 0, 100% 0, 
-            100% 65%, calc(100% - 10px) 65%, calc(100% - 60px) 100%, 0 100%);
+        height: 55px;
+        clip-path: polygon(0 35%, 10px 35%, 60px 0, 100% 0,
+                100% 65%, calc(100% - 10px) 65%, calc(100% - 60px) 100%, 0 100%);
         /* clip-path: polygon(0 23%, 120px 23%, 170px 0, 100% 0, 100% 100%, 0 100%); */
+        clip-path: polygon(0 0, calc(100% - 100px) 0, calc(100% - 50px) 14px, 100% 14px, 100% 100%, calc(100% - 50px) 100%, calc(100% - 100px) calc(100% - 14px), 0 calc(100% - 14px));
 
         h2 {
-            margin: 4px 8px 4px 70px;
+            margin: 4px 8px;
             text-shadow: var(--light-text-shadow-big);
             line-height: 2rem;
         }
@@ -302,21 +303,40 @@ html {
     .section__header::before {
         content: "";
         position: absolute;
-        height: 2rem;
+        height: 55px;
         width: 100%;
-        clip-path: polygon(
-            0 calc(100% - 4px), calc(100% - 60px) calc(100% - 4px), calc(100% - 10px) calc(65% - 4px), 100% calc(65% - 4px),
-            100% calc(65% - 2px), calc(100% - 10px) calc(65% - 2px), calc(100% - 60px) calc(100% - 2px), 0 calc(100% - 2px),
-            0 calc(100% - 4px),
-            0 calc(35% + 2px), 10px calc(35% + 2px), 60px 2px, 100% 2px,
-            100% 4px, 60px 4px, 10px calc(35% + 4px), 0 calc(35% + 4px),
-            0 calc(35% + 2px));
+        clip-path: polygon(0 calc(100% - 4px), calc(100% - 60px) calc(100% - 4px), calc(100% - 10px) calc(65% - 4px), 100% calc(65% - 4px),
+                100% calc(65% - 2px), calc(100% - 10px) calc(65% - 2px), calc(100% - 60px) calc(100% - 2px), 0 calc(100% - 2px),
+                0 calc(100% - 4px),
+                0 calc(35% + 2px), 10px calc(35% + 2px), 60px 2px, 100% 2px,
+                100% 4px, 60px 4px, 10px calc(35% + 4px), 0 calc(35% + 4px),
+                0 calc(35% + 2px));
         /* clip-path: polygon(
             0 calc(23% + 2px), 120px calc(23% + 2px), 170px 2px, 100% 2px,
             100% 4px, 170px 4px, 120px calc(23% + 4px), 0 calc(23% + 4px),
             0 calc(23% + 2px)); */
-        
+        clip-path: polygon(0 0, calc(100% - 100px) 0, calc(100% - 50px) 14px, 100% 14px, 100% 100%, calc(100% - 50px) 100%, calc(100% - 100px) calc(100% - 14px), 0 calc(100% - 14px));
+        clip-path: polygon(0 2px, calc(100% - 100px) 2px, calc(100% - 50px) 16px, 100% 16px,
+                100% 18px, calc(100% - 50px) 18px, calc(100% - 100px) 4px, 0 4px,
+                0 2px,
+                100% calc(100% - 4px), calc(100% - 50px) calc(100% - 4px), calc(100% - 100px) calc(100% - 18px), 0 calc(100% - 18px),
+                0 calc(100% - 16px), calc(100% - 100px) calc(100% - 16px), calc(100% - 50px) calc(100% - 2px), 100% calc(100% - 2px),
+                100% calc(100% - 4px));
+
+
         background: var(--light-accent);
+    }
+
+    .github_link {
+        width: fit-content;
+    }
+
+    .github_link::before {
+        content: url(./assets/img/github-original.svg);
+        display: inline-block;
+        margin-right: 1ch;
+        height: 0.9rem;
+        width: 0.9rem;
     }
 
 }
