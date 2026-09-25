@@ -433,7 +433,7 @@ html {
                 100% 65%, calc(100% - 10px) 65%, calc(100% - 60px) 100%, 0 100%);
         /* clip-path: polygon(0 23%, 120px 23%, 170px 0, 100% 0, 100% 100%, 0 100%); */
         clip-path: polygon(0 0, calc(100% - 100px) 0, calc(100% - 50px) 14px, 100% 14px, 100% 100%, calc(100% - 50px) 100%, calc(100% - 100px) calc(100% - 14px), 0 calc(100% - 14px));
-
+        margin-top: 20px;
 
         h2 {
             margin: 4px 8px;
@@ -465,11 +465,17 @@ html {
                 0 calc(100% - 16px), calc(100% - 100px) calc(100% - 16px), calc(100% - 50px) calc(100% - 2px), 100% calc(100% - 2px),
                 100% calc(100% - 4px));
 
-
         background: var(--light-accent);
     }
 
     .tab__item {
+
+        a {
+            color: oklch(36% 0.23 267);
+            text-underline-offset: 2px;
+            text-shadow: 1px 1px 0 oklch(80% 0.10 267), 0px 1px 0 oklch(80% 0.10 267), 1px 0px 0 oklch(80% 0.10 267);
+        }
+
         .tab__item__header {
             display: flex;
             flex-direction: row;
@@ -484,6 +490,8 @@ html {
             .github_link {
                 width: 14ch;
                 clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 50%, calc(100% - 5px) 100%, 0 100%);
+                display: flex;
+                align-items: center;
             }
 
             .github_link::before {
@@ -494,16 +502,51 @@ html {
                 width: 0.9rem;
             }
 
-            .me__project__link {
-                margin: 3px auto;
+        }
+
+        .me__project__link {
+            display: block;
+            margin: 3px auto;
+            width: 90%;
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            margin: 3px auto;
+            width: 90%;
+        }
+
+        .me__project__features, .me__project__technos {
+            display: flex;
+            margin: 5px 5%;
+            gap: 5px;
+            background: none;
+            width: 90%;
+            padding: 0;
+            flex-wrap: wrap;
+
+            li {
+                background: var(--light-box-bg);
+                padding: 3px;
+                border-radius: 5px;
+                background: var(--bg-color);
+                color: var(--dark-box-bg);
             }
+        }
+        
+        .me__project__features li {
+            background: var(--bg-grid-color);
+            color: var(--light-text-color);
+            text-shadow: var(--light-text-shadow);
         }
     }
 
 
 }
 
-#skills_tab {
+#skills_tab,
+.interests {
     h3 {
         font-size: 1.3rem;
         margin: 0;
@@ -573,6 +616,7 @@ html {
     100% {
         background-color: #315a10;
         color: #d6ff7b;
+        text-shadow: 1px 1px 0 var(--light-accent), 0px 1px 0 var(--light-accent), 1px 0px 0 var(--light-accent);
     }
 }
 
@@ -642,6 +686,21 @@ nav {
                     font-family: "Pokemon BW";
                     border: none;
                 }
+            }
+        }
+
+        li:has(#me) {
+            width: 7ch;
+            /* height: 2rem; */
+            clip-path: polygon(0 0, 100% 0, 80% 50%, 100% 100%, 0 100%);
+            /* margin-top: -7px; */
+            /* align-self: end; */
+            margin-right: -7px;
+
+            button {
+                line-height: 1.5rem;
+                text-align: left;
+                padding-left: 10px;
             }
         }
 

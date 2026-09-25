@@ -28,14 +28,16 @@ buttons.forEach(btn => {
     })
 });
 
-const skills = document.querySelectorAll("#skills_tab li");
+buttons[0].click();
+
+const skills = document.querySelectorAll("#skills_tab li, .interests li");
 skills.forEach((skill, i) => {
     skill.style.animationDelay = `${i * 1}s`;
 
     let skillName = skill.innerHTML;
     const icon = document.createElement("img");
     if (skillName == "C#") skillName = "csharp";
-    icon.src = `./assets/img/${skillName}.svg`;
+    icon.src = `./assets/img/icons/${skillName}.svg`;
     icon.style.height = "1.7rem";
     icon.style.width = "50px";
     icon.style.position = "absolute";
