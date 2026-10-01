@@ -45,3 +45,7 @@ skills.forEach((skill, i) => {
     icon.style.marginTop = "3px";
     skill.appendChild(icon);
 });
+
+const options = document.querySelector("dialog");
+options.showModal();
+// options.addEventListener("click", () => options.close());
