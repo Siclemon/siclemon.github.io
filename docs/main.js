@@ -47,5 +47,7 @@ skills.forEach((skill, i) => {
 });
 
 const options = document.querySelector("dialog");
+const close = document.querySelector(".options__close")
 options.showModal();
-// options.addEventListener("click", () => options.close());
+close.addEventListener("click", () => options.close());
+

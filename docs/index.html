@@ -287,14 +287,20 @@
             </li>
         </ul>
     </nav>
-    <dialog>
-        <header>Options</header>
-        <label for="animCheckbox" class="options__animations">
+    <dialog class="options">
+        <button class="options__close"></button>
+        <div class="options__header">Options</div>
+        <label for="animCheckbox" class="options__item">
             Animations
-            <input type="checkbox" name="" id="animCheckbox">
+            <input type="checkbox" id="animCheckbox" checked>
             <div></div>
         </label>
-        <div class="rond"></div>
+        <label for="dysFont" class="options__item">
+            Police dyslexie
+            <input type="checkbox" id="dysFont">
+            <div></div>
+        </label>
+
     </dialog>
 </body>
 
