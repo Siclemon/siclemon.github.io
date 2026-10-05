@@ -10,7 +10,7 @@
     <script src="./main.js" defer></script>
 </head>
 
-<body>
+<body class="animated">
     <header class="header">
         <div class="lines header__lines"></div>
         <h1>Simon JECKERT</h1>
@@ -21,7 +21,7 @@
         <article class="me">
             <div class="me__bg_wrapper_wrapper">
                 <div class="me__bg_wrapper">
-                    <div class="me__bg">
+                    <div class="me__bg animated">
                         <div class="me__bg__line me__bg__line1"></div>
                         <div class="me__bg__line me__bg__line2"></div>
                     </div>
@@ -288,19 +288,20 @@
         </ul>
     </nav>
     <dialog class="options">
-        <button class="options__close"></button>
-        <div class="options__header">Options</div>
-        <label for="animCheckbox" class="options__item">
-            Animations
-            <input type="checkbox" id="animCheckbox" checked>
-            <div></div>
-        </label>
-        <label for="dysFont" class="options__item">
-            Police dyslexie
-            <input type="checkbox" id="dysFont">
-            <div></div>
-        </label>
-
+        <div class="options__content">
+            <button class="options__close"></button>
+            <div class="options__header">Options</div>
+            <label for="animCheckbox" class="options__item" id="animLabel">
+                Animations
+                <input type="checkbox" id="animCheckbox" checked>
+                <div></div>
+            </label>
+            <label for="dysFont" class="options__item">
+                Police dyslexie
+                <input type="checkbox" id="dysFont">
+                <div></div>
+            </label>
+        </div>
     </dialog>
 </body>
 

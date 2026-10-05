@@ -12,9 +12,9 @@ buttons.forEach(btn => {
             currentTab.style.display = "flex";
 
         window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            top: 0,
+            behavior: 'smooth'
+        });
 
         //add style to pressed button
         const lis = document.querySelectorAll("li.nav__button");
@@ -22,16 +22,13 @@ buttons.forEach(btn => {
             li.classList.remove("active");
         });
         btn.closest("li").classList.add("active");
-
-        // const abtme = document.querySelector("#about_me")
-        // abtme.style.display = "none";
-    })
+    });
 });
 
 buttons[0].click();
 
-const skills = document.querySelectorAll("#skills_tab li, .interests li");
-skills.forEach((skill, i) => {
+const listElements = document.querySelectorAll("#skills_tab li, .interests li");
+listElements.forEach((skill, i) => {
     skill.style.animationDelay = `${i * 1}s`;
 
     let skillName = skill.innerHTML;
@@ -47,7 +44,39 @@ skills.forEach((skill, i) => {
 });
 
 const options = document.querySelector("dialog");
-const close = document.querySelector(".options__close")
+const close = document.querySelector(".options__close");
 options.showModal();
 close.addEventListener("click", () => options.close());
 
+const animationToggle = document.getElementById("animCheckbox");
+const animationTogglee = document.querySelector("#animLabel div");
+let animatedElements = document.querySelectorAll(".animated");
+animatedElements = [...animatedElements].concat([...listElements]);
+
+console.log(animatedElements)
+
+for (const el of animatedElements) {
+    if (!animationToggle.checked) {
+        el.classList.add("noAnimation");
+    }
+}
+
+animationToggle.addEventListener("change", () => {
+    for (const el of animatedElements) {
+        el.classList.toggle("noAnimation");
+    }
+});
+
+const dysToggle = document.getElementById("dysFont");
+const html = document.querySelector("html");
+const body = document.body;
+
+dysToggle.addEventListener("change", () => {
+    if (dysToggle.checked) {
+        body.style.fontFamily = "openDyslexic";
+        html.style.fontSize = "0.9rem";
+    } else {
+        body.style.fontFamily = "Pokemon BW";
+        html.style.fontSize = "1.4rem";
+    }
+});
