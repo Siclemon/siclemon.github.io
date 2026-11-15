@@ -72,11 +72,14 @@ const html = document.querySelector("html");
 const body = document.body;
 
 dysToggle.addEventListener("change", () => {
-    if (dysToggle.checked) {
-        body.style.fontFamily = "openDyslexic";
-        html.style.fontSize = "0.9rem";
-    } else {
-        body.style.fontFamily = "Pokemon BW";
-        html.style.fontSize = "1.4rem";
-    }
+    // if (dysToggle.checked) {
+    //     body.style.fontFamily = "openDyslexic";
+    //     html.style.fontSize = "1.05rem";
+    //     html.style.lineHeight = "1.45";
+    // } else {
+    //     body.style.fontFamily = "Pokemon BW";
+    //     html.style.fontSize = "1.4rem";
+    //     html.style.lineHeight = "1";
+    // }
+    document.querySelector('html').classList.toggle('dyslexic', dysToggle.checked);
 });

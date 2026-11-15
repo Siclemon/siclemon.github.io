@@ -36,7 +36,6 @@ body {
     background-position: 0px 0px;
     animation: bg_sliding 6s linear infinite;
 
-    font-family: "Pokemon BW";
     /* height: 2000px; */
     min-height: 100vh;
     padding-bottom: 100px;
@@ -44,8 +43,38 @@ body {
 
 html {
     overflow-x: hidden;
+    font-family: "Pokemon BW", sans-serif;
     font-size: 1.4rem;
-    line-height: 1em;
+    line-height: 1;
+
+    &.dyslexic {
+        font-family: "OpenDyslexic", "Pokemon BW", sans-serif;
+        font-size: 0.98rem;
+        line-height: 1;
+
+        .nav__button {
+            font-size: 0.7rem;
+            font-family: "OpenDyslexic", "Pokemon BW", sans-serif;
+            letter-spacing: -1px;
+            padding-left: 3px !important;
+        }
+
+        .tab__header,
+        .section__header {
+            padding-left: 0 !important;
+
+            h2 {
+                letter-spacing: -3px !important;
+                margin-left: 0 !important;
+                font-size: 1.25rem !important;
+                line-height: 1.5 !important;
+            }
+        }
+
+        * {
+            letter-spacing: calc(progress(1em, 18px, 48px) * -0.8em);
+        }
+    }
 }
 
 .box_decoration__shadow {
@@ -841,6 +870,7 @@ nav {
         top: 15px;
         right: 15px;
     }
+
     .options__close:active {
         border: none;
         filter: brightness(1.2);
