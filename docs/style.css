@@ -77,6 +77,10 @@ html {
     }
 }
 
+.bold {
+    font-weight: bolder;
+}
+
 .box_decoration__shadow {
     height: 12px;
     width: 80px;
@@ -211,12 +215,13 @@ html {
         position: absolute;
         left: 14%;
         top: calc(50% - 40px);
+        outline: 2px solid var(--header-bg);
     }
 
     .me__box {
         background: var(--light-box-bg);
         height: 170px;
-        width: 55%;
+        width: 55.5%;
         position: absolute;
         left: 42.5%;
         top: 0px;
@@ -246,9 +251,9 @@ html {
         }
 
         h2 {
-            font-size: 1.1em;
+            font-size: 1.06em;
             line-height: 0.85em;
-            margin: 0 3px;
+            margin: 0 1px 0 2px;
             font-weight: 400;
         }
 
@@ -376,7 +381,7 @@ html {
                 font-weight: normal;
 
                 margin: 0 auto;
-                padding: 2px 8px;
+                padding: 2px 8px 2px 12px;
             }
 
             div {
@@ -414,6 +419,11 @@ html {
             }
         }
 
+        img {
+            box-sizing: border-box;
+            border: 2px solid var(--dark-box-bg);
+            border-radius: 3px;
+        }
 
         p {
             margin: 0 auto;
@@ -792,7 +802,7 @@ nav {
 .options {
     background-color: var(--grey-box-bg);
     min-height: 600px;
-    min-width: 360px;
+    min-width: 340px;
     font-size: 1.2rem;
     padding: 10px 30px;
     box-sizing: border-box;
@@ -880,6 +890,88 @@ nav {
         font-family: impact;
     }
 
+    &::backdrop {
+        backdrop-filter: blur(1px);
+        background-color: oklch(5% 0 0 / 0.2);
+    }
+}
+
+#options_button {
+    background: var(--medium-accent);
+    border: 2px solid var(--header-bg);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: fixed;
+    right: 15px;
+    bottom: 87px;
+    font-size: 28px;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    box-shadow: 1px 2px 3px 1px #0003;
+
+    svg {
+        height: 46px;
+        width: 46px;
+
+        path {
+            stroke: var(--border-accent);
+        }
+    }
+
+    &:hover {
+        background: var(--bg-color);
+        cursor: pointer;
+
+        path {
+            stroke: var(--medium-accent);
+        }
+    }
+}
+
+#disclaimer {
+    width: 260px;
+    background: var(--light-box-bg);
+
+    h2 {
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+
+    span {
+        color: darkred;
+        font-style: italic;
+    }
+
+    button {
+        background: var(--light-accent);
+        border: 2px solid var(--dark-box-bg);
+        font-family: "Pokemon BW", sans-serif;
+        font-size: 1.1rem;
+        box-shadow: 0 0 1px 1px var(--dark-text-color);
+
+        &:hover {
+            filter: brightness(1.2);
+            cursor: pointer;
+        }
+    }
+
+    a {
+        color: oklch(36% 0.23 267);
+        text-underline-offset: 2px;
+        /* text-shadow: 1px 1px 0 oklch(80% 0.10 267), 0px 1px 0 oklch(80% 0.10 267), 1px 0px 0 oklch(80% 0.10 267); */
+        text-align: center;
+        width: 100%;
+        display: block;
+        margin-top: 10px;
+    }
+
+    &::backdrop {
+        backdrop-filter: blur(1px);
+        background-color: oklch(5% 0 0 / 0.2);
+    }
 }
 
 .noAnimation {
@@ -912,4 +1004,53 @@ nav {
 @font-face {
     font-family: "OpenDyslexic";
     src: url('./assets/fonts/OpenDyslexic-Regular.otf');
+}
+
+@media (min-width: 500px) {
+    body {
+        width: 400px;
+        margin: auto;
+    }
+
+    .header,
+    .me__bg_wrapper_wrapper {
+        width: 400px !important;
+    }
+
+    .me .me__box .box_decoration__shadow {
+        width: 70px;
+    }
+
+    .tab .box_decoration__shadow {
+        width: 112px;
+    }
+
+    nav {
+        width: 400px;
+    }
+
+    body {
+        &::before {
+            content: "";
+            background-color: var(--header-bg);
+            position: absolute;
+            left: 0;
+            height: 3000px;
+            width: calc(50vw - 200px);
+        }
+
+        &::after {
+            content: "";
+            background-color: var(--header-bg);
+            position: absolute;
+            top: 0;
+            left: calc(50vw + 200px);
+            height: 3000px;
+            width: calc(50vw - 200px);
+        }
+    }
+
+    #options_button {
+        right: calc(50vw - 200px + 15px)
+    }
 }

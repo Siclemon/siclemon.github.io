@@ -25,8 +25,9 @@ buttons.forEach(btn => {
     });
 });
 
-buttons[0].click();
+buttons[0].click(); //profile tab is opened by default
 
+//list highlight animation
 const listElements = document.querySelectorAll("#skills_tab li, .interests li");
 listElements.forEach((skill, i) => {
     skill.style.animationDelay = `${i * 1}s`;
@@ -43,17 +44,17 @@ listElements.forEach((skill, i) => {
     skill.appendChild(icon);
 });
 
+//options menu
 const options = document.querySelector("dialog");
 const close = document.querySelector(".options__close");
-options.showModal();
+document.getElementById('options_button').addEventListener('click', () => options.showModal());
 close.addEventListener("click", () => options.close());
 
+//options - animations
 const animationToggle = document.getElementById("animCheckbox");
 const animationTogglee = document.querySelector("#animLabel div");
 let animatedElements = document.querySelectorAll(".animated");
 animatedElements = [...animatedElements].concat([...listElements]);
-
-console.log(animatedElements)
 
 for (const el of animatedElements) {
     if (!animationToggle.checked) {
@@ -67,19 +68,19 @@ animationToggle.addEventListener("change", () => {
     }
 });
 
+//options - dyslexia
 const dysToggle = document.getElementById("dysFont");
 const html = document.querySelector("html");
 const body = document.body;
 
 dysToggle.addEventListener("change", () => {
-    // if (dysToggle.checked) {
-    //     body.style.fontFamily = "openDyslexic";
-    //     html.style.fontSize = "1.05rem";
-    //     html.style.lineHeight = "1.45";
-    // } else {
-    //     body.style.fontFamily = "Pokemon BW";
-    //     html.style.fontSize = "1.4rem";
-    //     html.style.lineHeight = "1";
-    // }
     document.querySelector('html').classList.toggle('dyslexic', dysToggle.checked);
 });
+
+//disclaimer if wide screen
+if (window.innerWidth >= 500) {
+    const disclaimer = document.getElementById('disclaimer');
+    disclaimer.showModal();
+    document.getElementById('disclaimer__ok').addEventListener('click', () => disclaimer.close());
+    console.log(disclaimer);
+}

@@ -27,7 +27,7 @@
                     </div>
                 </div>
             </div>
-            <img class="me__img" src="./assets/img/arcko.jpg" alt="">
+            <img class="me__img" src="./assets/img/moi.jpg" alt="">
             <div class="me__box">
                 <div class="box_decoration__shadow">
                     <div class="box_decoration">
@@ -44,11 +44,9 @@
                 <div class="me__box__other">
                     <div class="me__box__other__info">
                         <span>age</span>
-                        <span>24 ans</span>
-
+                        <span>25 ans</span>
                     </div>
                 </div>
-
             </div>
         </article>
 
@@ -65,13 +63,17 @@
                 <h2>A propos de moi</h2>
             </header>
 
-            <p id="me__about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam corporis ipsa itaque error.
-                Id
-                repellendus
-                voluptate labore, facere laudantium sapiente sunt repellat consequatur. Ut reprehenderit vel aut
-                facilis
-                fugit pariatur!</p>
-
+            <p id="me__about">Mon formateur a remarqué que mon <span class="bold">raisonnement logique</span>
+                associé à ma <span class="bold">bonne mémoire</span> facilite mes apprentissages. Il
+                me trouve <span class="bold">rapide</span> et <span class="bold">investi</span> dans mon travail. <span
+                    class="bold">Curieux</span>,
+                j’aime effectuer des recherches documentaires pour
+                approfondir les concepts. Mes amis et collègues apprécient
+                ma <span class="bold">pédagogie</span>.
+                <br>
+                Je souhaite mettre ces atouts au service d’un stage de fin
+                de formation.
+            </p>
 
             <section class="projects">
                 <header class="section__header">
@@ -80,16 +82,21 @@
 
                 <article class="tab__item">
                     <header class="tab__item__header">
-                        <h3>phonetic quiz</h3>
+                        <h3>Quiz de phonétique</h3>
                         <a href="https://github.com/Siclemon/phonetic-quiz" class="github_link">GitHub</a>
                     </header>
-                    <a href="https://siclemon.github.io/phonetic-quiz" class="me__project__link">siclemon.github.io/phonetic-quiz</a>
-                    <img src="./assets/img/pokenumber.png"
-                        alt="Capture d'écran de PokeNumber.com. Sprite du Pokémon Pichu et champ de texte.">
-                    <p>Petit quiz pour s'entraîner à lire les mots anglais écrits en phonétique (IPA).</p>
+                    <a href="https://siclemon.github.io/phonetic-quiz"
+                        class="me__project__link">siclemon.github.io/phonetic-quiz</a>
+                    <img src="./assets/img/phonequiz.png"
+                        alt="Capture d'écran du site siclemon.github.io/phonetic-quiz au format mobile. Écriture phonétique du mot 'quotation'.">
+                    <p>Petit quiz pour s'entraîner à lire les mots anglais écrits en phonétique (IPA). Formattage de
+                        données Wikimedia via jq. Respect de maquettes Figma. Réglage de difficulté en fonction de la
+                        fréquence d'usage. Priorisation des prononciations standards britanniques et nord-américaines.
+                    </p>
 
                     <ul class="me__project__features">
                         <li>Gestion de difficulté</li>
+                        <li>Dictionnaires de 100 000+ mots</li>
                     </ul>
 
                     <ul class="me__project__technos">
@@ -108,7 +115,8 @@
                     <a href="http://pokenumber.com" class="me__project__link">PokeNumber.com</a>
                     <img src="./assets/img/pokenumber.png"
                         alt="Capture d'écran de PokeNumber.com. Sprite du Pokémon Pichu et champ de texte.">
-                    <p>Quiz Pokémon où il faut deviner le numéro du Pokémon affiché.</p>
+                    <p>Quiz Pokémon où il faut deviner le numéro du Pokémon affiché. Premier projet web personnel pour
+                        m'entrainer avec HTML/CSS/JS, et pour travailler ma mémoire.</p>
 
                     <ul class="me__project__features">
                         <li>i18n</li>
@@ -130,7 +138,7 @@
                     </header>
                     <img src="./assets/img/bashkanoid.png"
                         alt="Capture d'écran de Bashkanoid. Écran de terminal avec des briques une balle et la plateforme du joueur.">
-                    <p>Petit projet d'arkanoid en Bash.</p>
+                    <p>Petit projet d'arkanoid en Bash. Défi personnel pour prendre en main le langage.</p>
                     <ul class="me__project__features">
                         <li>Physique de la balle</li>
                         <li>Gestion des briques</li>
@@ -233,6 +241,19 @@
                 <header class="tab__item__header">
                     <h3>Immersion en milieu professionnel</h3>
                     <div>
+                        <time datetime="2026">2026</time>
+                        <span>Systancia - Pfastatt</span>
+                    </div>
+                </header>
+                <ul>
+                    <li>Cybersécurité</li>
+                    <li>Découverte du milieu professionnel</li>
+                </ul>
+            </article>
+            <article class="tab__item">
+                <header class="tab__item__header">
+                    <h3>Immersion en milieu professionnel</h3>
+                    <div>
                         <time datetime="2026">2025</time>
                         <span>Gacha Game - Wittelsheim</span>
                     </div>
@@ -322,6 +343,13 @@
             </li>
         </ul>
     </nav>
+    <button id="options_button"><svg width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+            fill="none">
+            <path class="cog" stroke="#000000" stroke-linejoin="round" stroke-width="2"
+                d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+            <path class="cog" stroke="#000000" stroke-linejoin="round" stroke-width="2"
+                d="M10.47 4.32c.602-1.306 2.458-1.306 3.06 0l.218.473a1.684 1.684 0 0 0 2.112.875l.49-.18c1.348-.498 2.66.814 2.162 2.163l-.18.489a1.684 1.684 0 0 0 .875 2.112l.474.218c1.305.602 1.305 2.458 0 3.06l-.474.218a1.684 1.684 0 0 0-.875 2.112l.18.49c.498 1.348-.814 2.66-2.163 2.162l-.489-.18a1.684 1.684 0 0 0-2.112.875l-.218.473c-.602 1.306-2.458 1.306-3.06 0l-.218-.473a1.684 1.684 0 0 0-2.112-.875l-.49.18c-1.348.498-2.66-.814-2.163-2.163l.181-.489a1.684 1.684 0 0 0-.875-2.112l-.474-.218c-1.305-.602-1.305-2.458 0-3.06l.474-.218a1.684 1.684 0 0 0 .875-2.112l-.18-.49c-.498-1.348.814-2.66 2.163-2.163l.489.181a1.684 1.684 0 0 0 2.112-.875l.218-.474Z" />
+        </svg></button>
     <dialog class="options">
         <div class="options__content">
             <button class="options__close"></button>
@@ -337,6 +365,14 @@
                 <div></div>
             </label>
         </div>
+    </dialog>
+    <dialog id="disclaimer">
+        <h2>Bienvenue sur mon site</h2>
+        <span>Site en construction</span>
+        <p>Actuellement le site n'a qu'un affichage mobile de disponible, vous pouvez le voir ainsi, ou plutôt aller sur
+            mon GitHub.</p>
+        <button id="disclaimer__ok">Voir le site en affichage mobile</button>
+        <a href="http://github.com/Siclemon">Aller sur GitHub</a>
     </dialog>
 </body>
 
